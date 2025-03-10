@@ -1,6 +1,9 @@
 .header {
   padding: 1rem 0;
   border-bottom: 1px solid var(--light-blue-color);
+  position: relative;
+  overflow: hidden;
+  overflow-y: auto;
 }
 .header__burger {
   width: 50px;
@@ -13,6 +16,7 @@
   border: none;
   padding: 0;
   cursor: pointer;
+  z-index: 1;
 
   &::after,
   &::before {
@@ -56,4 +60,24 @@
   height: 3px;
   position: relative;
   transition: all 0.3s ease-in;
+}
+
+.header__nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: var(--light-blue-color);
+  padding: 5rem 2rem 1rem;
+  transition: all 0.3s ease-in;
+  transform: translateX(-100%);
+  visibility: hidden;
+  z-index: -1;
+
+  &.active {
+    transform: translateX(0);
+    visibility: visible;
+    z-index: 0;
+  }
 }

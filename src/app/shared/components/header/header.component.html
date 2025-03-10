@@ -7,5 +7,9 @@
     >
       <span></span>
     </button>
+
+    <div class="header__nav" [class]="{ active: isOpenMenu }">
+      <app-nav [(isSideMenuActive)]="isOpenMenu"></app-nav>
+    </div>
   </div>
 </header>

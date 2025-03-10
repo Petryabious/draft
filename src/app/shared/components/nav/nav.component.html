@@ -1,1 +1,39 @@
-<p>nav works!</p>
+<nav class="nav">
+  <ul class="nav__list">
+    <li class="nav__list-item">
+      <a
+        routerLink="/home"
+        (click)="changeStateSideMenu()"
+        routerLinkActive="active"
+        >Главная</a
+      >
+    </li>
+    <li class="nav__list-item">
+      <a
+        routerLink="/topics/js"
+        (click)="changeStateSideMenu()"
+        routerLinkActive="active"
+        >JavaScript</a
+      >
+    </li>
+    <li class="nav__list-item">
+      <a
+        routerLink="/topics/ts"
+        (click)="changeStateSideMenu()"
+        routerLinkActive="active"
+        >TypeScript</a
+      >
+    </li>
+    <li class="nav__list-item">
+      <a
+        routerLink="/topics/angular"
+        (click)="changeStateSideMenu()"
+        routerLinkActive="active"
+        >Angular</a
+      >
+    </li>
+    <li class="nav__list-item">
+      <a>Разное</a>
+    </li>
+  </ul>
+</nav>
